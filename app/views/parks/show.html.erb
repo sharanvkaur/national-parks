@@ -1,0 +1,22 @@
+<h1>Parks#show</h1>
+<p>Find me in app/views/parks/show.html.erb</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @park.name %>
+</p>
+
+<p>
+  <strong>description:</strong>
+  <%= @park.description %>
+</p>
+
+<p>
+  <strong>picture:</strong>
+  <%= @park.picture %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_park_path(@park) %> |
+<%= link_to 'All Parks', parks_path %>
