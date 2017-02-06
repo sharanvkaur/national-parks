@@ -1,21 +1,18 @@
-<div class="container">
-  <div class="form-container">
+<div class="form-container">
+  <h1>Editing Park</h1>
+    <%= render 'form', park: @park %>
 
-<h1>Editing Park</h1>
+    <h4> current photo: </h4>
+      <img src="http://res.cloudinary.com/dcia1leyj/image/upload/c_fill,h_200,w_200/<%= @park.picture %>">
 
-<%= render 'form', park: @park %>
+    <br><br>
 
+    <button type="button" class="btn btn-lg btn-default">
+      <%= link_to 'Show', @park %>
+    </button>
 
-<button type="button" class="btn btn-lg btn-default">
-  <%= link_to 'Show', @park %>
-</button>
-
-
-
-<button type="button" class="btn btn-lg btn-default">
-  <%= link_to 'Back', parks_path %>
-</button>
-
-
-</div>
+    <button type="button" class="btn btn-lg btn-default">
+      <%= link_to 'Back', parks_path %>
+    </button>
+    
 </div>

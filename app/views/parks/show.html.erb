@@ -1,29 +1,20 @@
+<div class="kill-panel">
+  <div class="panel panel-default panel-transparent">
 
-<div class="container">
+    <div class="panel-heading">
+      <h2 class="panel-title"><%= @park.name %></h2>
+    </div>
 
-  <div class="panel-container">
-    <p id="notice"><%= notice %></p>
-
-
-
-
-<div class="panel panel-default panel-transparent">
-  <div class="panel-heading">
-    <h2 class="panel-title"><%= @park.name %></h2>
+    <div class="panel-body">
+      <%= @park.description %><br><br>
+      <p>
+        <%= cl_image_tag(@park.picture, :width => 400, :height => 200, :crop => :fill) %>
+      </p>
+    </div>
   </div>
-  <div class="panel-body">
-    <%= @park.description %><br>
-    <img src="<%= @park.picture %>" width="100%">
-  </div>
+
   <button type="button" class="btn btn-lg btn-default"><%= link_to 'Edit', edit_park_path(@park) %></button>
 
-  <button type="button" class="btn btn-lg btn-default"><%= link_to 'All Parks', parks_path %></button><br>
-</div>
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Back to All Parks', parks_path %></button><br>
 
-
-
-
-
-
-</div>
 </div>

@@ -1,6 +1,6 @@
 <%= bootstrap_form_for(@park) do |f| %>
   <%= f.text_field :name %>
   <%= f.text_area :description %>
-  <%= f.text_field :picture %>
+  <%= f.file_field :picture %>
   <%= f.submit "Submit" %>
 <% end %>

@@ -1,11 +1,10 @@
-<div class="container">
-  <div class="form-container">
+<div class="form-container">
+  <h1>Create New Park</h1>
 
-<h1>Create New Park</h1>
+  <%= render 'form', park: @park %>
 
-<%= render 'form', park: @park %>
+  <br><br>
 
-<button type="button" class="btn btn-lg btn-default"><%= link_to 'Back', parks_path %></button>
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Back to All Parks', parks_path %></button>
 
-</div>
 </div>

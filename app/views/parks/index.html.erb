@@ -1,7 +1,3 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
-  
-
 <h1>America's Best National Parks</h1>
 <button class="btn btn-lg btn-default">
   <%= link_to 'Create New Park', new_park_path %>
@@ -13,7 +9,6 @@
       <th class="col-md-4"><h4>Park</h4></th>
       <th class="col-md-5"><h4>Description</h4></th>
       <th class="col-md-2"><h4>Actions</h4></th>
-
     </tr>
   </thead>
 
@@ -21,7 +16,7 @@
     <% @parks.each do |park| %>
       <tr>
         <td>
-          <img src="<%= park.picture %>" height="200px" width="400px">
+          <img src="http://res.cloudinary.com/dcia1leyj/image/upload/c_fill,h_200,w_400/<%= park.picture %>">
         </td>
         <td>
           <strong><%= park.name %></strong><br>
@@ -36,5 +31,3 @@
     <% end %>
   </tbody>
 </table>
-
-</div>

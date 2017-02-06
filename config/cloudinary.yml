@@ -1,0 +1,18 @@
+development:
+  cloud_name: dcia1leyj
+  api_key: '596239352612124'
+  api_secret: sGa2KdELxhyWnxq-FO28-j9A-tY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dcia1leyj
+  api_key: '596239352612124'
+  api_secret: sGa2KdELxhyWnxq-FO28-j9A-tY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dcia1leyj
+  api_key: '596239352612124'
+  api_secret: sGa2KdELxhyWnxq-FO28-j9A-tY
+  enhance_image_tag: true
+  static_image_support: false
