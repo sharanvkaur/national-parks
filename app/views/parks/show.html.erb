@@ -1,22 +1,29 @@
-<h1>Parks#show</h1>
-<p>Find me in app/views/parks/show.html.erb</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @park.name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>description:</strong>
-  <%= @park.description %>
-</p>
-
-<p>
-  <strong>picture:</strong>
-  <%= @park.picture %>
-</p>
+  <div class="panel-container">
+    <p id="notice"><%= notice %></p>
 
 
 
-<%= link_to 'Edit', edit_park_path(@park) %> |
-<%= link_to 'All Parks', parks_path %>
+
+<div class="panel panel-default panel-transparent">
+  <div class="panel-heading">
+    <h2 class="panel-title"><%= @park.name %></h2>
+  </div>
+  <div class="panel-body">
+    <%= @park.description %><br>
+    <img src="<%= @park.picture %>" width="100%">
+  </div>
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Edit', edit_park_path(@park) %></button>
+
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'All Parks', parks_path %></button><br>
+</div>
+
+
+
+
+
+
+</div>
+</div>

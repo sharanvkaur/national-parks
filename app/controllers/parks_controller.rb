@@ -15,6 +15,8 @@ class ParksController < ApplicationController
   def create
       @park = Park.new(park_params)
 
+
+
       respond_to do |format|
         if @park.save
           format.html { redirect_to @park, notice: 'Park was successfully created.' }
@@ -52,7 +54,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_park
-      @park = Park.find(params[:id])
+      @park = Park.find_by(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

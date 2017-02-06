@@ -1,9 +1,21 @@
-<h1>Parks#edit</h1>
-<p>Find me in app/views/parks/edit.html.erb</p>
+<div class="container">
+  <div class="form-container">
 
 <h1>Editing Park</h1>
 
 <%= render 'form', park: @park %>
 
-<%= link_to 'Show', @park %> |
-<%= link_to 'Back', parks_path %>
+
+<button type="button" class="btn btn-lg btn-default">
+  <%= link_to 'Show', @park %>
+</button>
+
+
+
+<button type="button" class="btn btn-lg btn-default">
+  <%= link_to 'Back', parks_path %>
+</button>
+
+
+</div>
+</div>
