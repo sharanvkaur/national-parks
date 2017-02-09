@@ -7,6 +7,17 @@
 
     <div class="panel-body">
       <%= @park.description %><br><br>
+
+      <% if @park.rangers.length > 0 %>
+      Rangers
+        <% @park.rangers.each do |ranger | %>
+          <li><%= ranger.name %></li>
+        <% end %>
+      <% else %>
+      There is no assigned ranger.
+      <% end %>
+
+
       <p>
         <%= cl_image_tag(@park.picture, :width => 400, :height => 200, :crop => :fill) %>
       </p>

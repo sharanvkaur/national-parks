@@ -1,0 +1,29 @@
+<div class="kill-panel">
+  <div class="panel panel-default panel-transparent">
+
+    <div class="panel-heading">
+      <h2 class="panel-title"><%= @ranger.name %></h2>
+    </div>
+
+    <div class="panel-body">
+
+      <% if @ranger.parks.length > 0 %>
+      <ul>
+        <% @ranger.parks.each do |ranger | %>
+        <li>  <%= ranger.name %> </li>
+        <% end %>
+      </ul>
+      <% else %>
+      There is no assigned ranger.
+      <% end %>
+
+
+
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Edit', edit_ranger_path(@ranger) %></button>
+
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Back to All Rangers', rangers_path %></button><br>
+
+</div>

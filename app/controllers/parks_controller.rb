@@ -2,17 +2,23 @@ class ParksController < ApplicationController
     before_action :set_park, only: [:show, :edit, :update, :destroy]
 
   def index
-    @parks = Park.all
+    @parks = Park.order(:name)
+    @rangers = Ranger.all
+
   end
 
   def show
+    @rangers = Ranger.all
+
   end
 
   def new
     @park = Park.new
+    @rangers = Ranger.all
   end
 
   def edit
+    @rangers = Ranger.all
   end
 
   # POST /parks
@@ -51,8 +57,12 @@ class ParksController < ApplicationController
       @park = Park.find(params[:id])
     end
 
+    # def park_params
+    #   params.require(:park).permit(:name, :description, :picture)
+    # end
+
     def park_params
-      params.require(:park).permit(:name, :description, :picture)
+      params.require(:park).permit(:name, :description,:picture, :ranger_ids => [])
     end
 
     def upload_file

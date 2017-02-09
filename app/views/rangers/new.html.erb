@@ -1,0 +1,15 @@
+<div class="form-container">
+  <h1>Create New Ranger</h1>
+
+  <%= bootstrap_form_for(@ranger) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.collection_check_boxes :park_ids, @parks, :id, :name %>
+    <%= f.submit "Submit" %>
+  <% end %>
+
+
+  <br><br>
+
+  <button type="button" class="btn btn-lg btn-default"><%= link_to 'Back to Rangers', rangers_path %></button>
+
+</div>

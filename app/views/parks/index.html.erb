@@ -21,6 +21,16 @@
         <td>
           <strong><%= park.name %></strong><br>
           <p><%= park.description %></p>
+          <% if park.rangers.length > 0 %>
+            Rangers
+            <% park.rangers.each do |ranger | %>
+            <li>  <%= ranger.name %></li>
+            <% end %>
+          <% else %>
+          There is no assigned ranger.
+          <% end %>
+
+
         </td>
         <td>
           <button type="button" class="btn btn-lg btn-block btn-default"><%= link_to 'Show', park %></button><br>
